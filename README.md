@@ -19,6 +19,7 @@ The pipeline simulates a real-world **data engineering workflow**, focusing on d
 ---
 
 ## 🏗️ Pipeline Architecture
+```bash
 Raw CSV Data
 ↓
 Extract (Python)
@@ -30,31 +31,35 @@ Load (SQLite Database)
 PySpark Processing
 ↓
 SQL Analysis
-
+```
 
 ---
 
 ## 📂 Project Structure
+
+```bash
 financial-etl-project/
 │
 ├── etl/
-│ ├── extract.py
-│ ├── transform.py
-│ └── load.py
+│   ├── extract.py        # Data extraction
+│   ├── transform.py      # Data cleaning & feature engineering
+│   └── load.py           # Load data into SQLite DB
 │
 ├── spark/
-│ └── spark_job.py
+│   └── spark_job.py      # PySpark processing
 │
 ├── sql/
-│ └── analysis.py
+│   └── analysis.py       # SQL analysis
 │
-├── data/ # Ignored (contains raw & processed data)
-├── run_pipeline.py # Main pipeline runner
+├── dashboard/            # Power BI dashboard (to be added)
 │
-├── requirements.txt
-├── README.md
+├── data/                 # Ignored (contains raw & processed data)
+│
+├── run_pipeline.py       # Main pipeline runner
+├── requirements.txt      # Dependencies
+├── README.md             # Project documentation
 └── .gitignore
-
+```
 
 ---
 
